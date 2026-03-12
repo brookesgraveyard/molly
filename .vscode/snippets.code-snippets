@@ -1,0 +1,67 @@
+{
+	"Class": {
+		"scope": "luau",
+		"prefix": "class",
+		"description": "Metatable class",
+		"body": [
+			"local ${0:$TM_FILENAME_BASE} = {}",
+			"${0:$TM_FILENAME_BASE}.__index = ${0:$TM_FILENAME_BASE}",
+			"",
+			"export type ${0:$TM_FILENAME_BASE} = setmetatable<{}, typeof(${0:$TM_FILENAME_BASE})>",
+			"",
+			"function ${0:$TM_FILENAME_BASE}.new()",
+			"\treturn setmetatable({}, ${0:$TM_FILENAME_BASE})",
+			"end",
+			"",
+			"return ${0:$TM_FILENAME_BASE}",
+			""
+		],
+	},
+	"Provider": {
+		"scope": "luau",
+		"prefix": "prvd",
+		"description": "Prvd 'M Wrong Provider",
+		"body": [
+			"local prvd = require(\"@shared/prvdmwrong/prvdmwrong\")",
+			"",
+			"local ${0:$TM_FILENAME_BASE} = {}",
+			"export type ${0:$TM_FILENAME_BASE} = typeof(${0:$TM_FILENAME_BASE})",
+			"",
+			"function ${0:$TM_FILENAME_BASE}.onStart(self: ${0:$TM_FILENAME_BASE})",
+			"\t",
+			"end",
+			"",
+			"return prvd(${0:$TM_FILENAME_BASE})",
+			""
+		],
+	},
+	"Mechanic": {
+		"scope": "luau",
+		"prefix": "mechanic",
+		"description": "Mechanic",
+		"body": [
+			"local std = require(\"@libs/std\")",
+			"",
+			"local ${0:$TM_FILENAME_BASE} = std.Mechanic({})",
+			"export type ${0:$TM_FILENAME_BASE}Mechanic = std.Mechanic<typeof(${0:$TM_FILENAME_BASE})>",
+			"${0:$TM_FILENAME_BASE}.instanceTag = \"${0:$TM_FILENAME_BASE}\"",
+			"${0:$TM_FILENAME_BASE}.instanceType = std.isA.${1:Instance}()",
+			"${0:$TM_FILENAME_BASE}.debuggerEmoji = \"${2:💠}\"",
+			"",
+			"return ${0:$TM_FILENAME_BASE}",
+			""
+		],
+	},
+	"Require": {
+		"scope": "luau",
+		"prefix": "require",
+		"description": "Require",
+		"body": "local ${0:module} = require(\"${1:path}\")"
+	},
+	"Service": {
+		"scope": "luau",
+		"prefix": "getservice",
+		"description": "GetService",
+		"body": "local ${0:Service} = game:GetService(\"${0:Service}\")"
+	}
+}
