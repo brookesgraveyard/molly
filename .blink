@@ -1,0 +1,33 @@
+option Casing = Camel
+option Typescript = true
+
+option RemoteScope = "MOLLY"
+
+option PromiseLibrary = "ReplicatedStorage.rbxts_include.Promise"
+option ClientOutput = "src/client/generated/blink.luau"
+option ServerOutput = "src/server/generated/blink.luau"
+
+enum Result<T, E> = "type" {
+    Ok {
+        value: T
+    },
+    Result {
+        error: E
+    }
+}
+
+scope Ecs {
+    struct ComponentDelta {
+        delta: unknown
+    }
+
+    map ComponentsToDelta = { [string]: ComponentDelta }
+    map IdsToComponents = { [u16]: ComponentsToDelta }
+
+    event ReplicateComponents { 
+        From: Server, 
+        Type: Reliable, 
+        Call: SingleAsync, 
+        Data: IdsToComponents 
+    }
+}

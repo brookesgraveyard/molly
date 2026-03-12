@@ -1,8 +1,26 @@
-# Project place file
-/Mlly ???????.rbxlx
+/node_modules
+/out
+/include
+*.tsbuildinfo
+.asphalt-debug
 
-# Roblox Studio lock files
-/*.rbxlx.lock
-/*.rbxl.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
 
-sourcemap.json
+flamework.build
+.env
+
+.DS_Store
+**/.DS_Store
+
+luau_packages
+lune_packages
+
+temp
+icon-manager.vsix
+
+src/client/generated
+src/shared/generated
+src/server/generated

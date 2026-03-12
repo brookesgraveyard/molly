@@ -1,0 +1,55 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "bun: watch",
+			"command": "sh",
+			"args": [
+				"watch.sh"
+			],
+			"isBackground": true,
+			"runOptions": {
+				"runOn": "folderOpen"
+			},
+			"presentation": {
+				"reveal": "never",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "rojo: serve",
+			"command": "rojo",
+			"args": [
+				"serve"
+			],
+			"isBackground": true,
+			"runOptions": {
+				"runOn": "folderOpen"
+			},
+			"presentation": {
+				"reveal": "never",
+				"panel": "new"
+			}
+		},
+		{
+			"type": "shell",
+			"label": "blink: watch",
+			"command": "blink",
+			"args": [
+				".blink",
+				"--watch"
+			],
+			"isBackground": true,
+			"runOptions": {
+				"runOn": "folderOpen"
+			},
+			"presentation": {
+				"reveal": "never",
+				"panel": "new"
+			}
+		}
+	]
+}

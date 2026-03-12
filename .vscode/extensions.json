@@ -1,0 +1,11 @@
+{
+	"recommendations": [
+		"tamasfe.even-better-toml",
+		"johnnymorganz.stylua",
+		"johnnymorganz.luau-lsp",
+		"dprint.dprint",
+		"checkraisefold.blink-vscode",
+		"naumovs.color-highlight",
+		"kampfkarren.selene-vscode"
+	]
+}

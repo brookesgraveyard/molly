@@ -1,0 +1,19 @@
+{
+	"name": "spritegen",
+	"module": "src/index.ts",
+	"type": "module",
+	"private": true,
+	"devDependencies": {
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"@napi-rs/canvas": "^0.1.72",
+		"@resvg/resvg-js": "^2.6.2",
+		"@std/toml": "npm:@jsr/std__toml",
+		"ansis": "^4.1.0",
+		"sharp": "^0.34.2"
+	}
+}

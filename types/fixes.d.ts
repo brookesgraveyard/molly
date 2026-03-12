@@ -1,0 +1,3 @@
+interface CheckableTypes {
+	vector: vector;
+}

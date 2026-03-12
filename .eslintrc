@@ -1,0 +1,52 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"jsx": true,
+		"useJSXTextNode": true,
+		"ecmaVersion": 2018,
+		"sourceType": "module",
+		"project": "./tsconfig.json"
+	},
+	"ignorePatterns": [
+		"/out",
+		"/scripts"
+	],
+	"plugins": [
+		"@typescript-eslint",
+		"roblox-ts",
+		"simple-import-sort",
+		"unused-imports"
+	],
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:roblox-ts/recommended"
+	],
+	"overrides": [
+		{
+			"files": [
+				"*.story.tsx",
+				"*.story.ts"
+			],
+			"rules": {
+				"no-restricted-imports": "off"
+			}
+		}
+	],
+	"rules": {
+		"simple-import-sort/imports": "error",
+		"simple-import-sort/exports": "error",
+		"no-restricted-syntax": [
+			"warn",
+			{
+				"selector": "ExportDefaultDeclaration",
+				"message": "prefer named exports"
+			}
+		],
+		"no-constant-condition": "off",
+		"roblox-ts/lua-truthiness": "off",
+		"@typescript-eslint/no-this-alias": "off",
+		"@typescript-eslint/no-explicit-any": "warn",
+		"unused-imports/no-unused-imports": "warn"
+	}
+}
